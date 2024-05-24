@@ -1,5 +1,5 @@
 <template>
-  <Tutorial/>
+  <ColorSquare />
 </template>
 
 <script>
