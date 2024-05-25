@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Nocember';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../fonts/nocember.ttf);
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+#header>div>h1 {
+    font-family: "Nocember";
+    text-align: center;
+    font-weight: 800;
+    color: hsl(166, 100%, 50%);
+    letter-spacing: 3px;
+}
+
+.faq {
+    text-align: center;
+    color: white;
+    font-family: 'Nocember';
+}
+
+.faq>ul>li {
+    padding: 0.5rem;
+}
+
+.faq>ul>li:hover {
+    cursor: pointer;
+    color: hsl(166, 100%, 50%);
+}
+
+.triangle {
+    font-weight: bold;
+    font-size: 1rem;
+    color: hsl(166, 100%, 50%);
+}
+
+#cta {
+    width: 100px;
+    /* Adjust width as needed */
+    height: 100px;
+    /* Adjust height as needed */
+    background-color: #f6c05a;
+    border: none;
+    border-radius: 10px;
+    /* Adjust border-radius to change button corners */
+    color: white;
+    /* Vertically center text */
+    text-decoration: none;
+    margin: 0 auto;
+    cursor: pointer;
+}
