@@ -1,0 +1,11 @@
+[package]
+name = "nft_io"
+version = "1.1.0"
+edition = "2021"
+
+[dependencies]
+gstd = "1.1.1"
+primitive-types = { version = "0.12", default-features = false }
+scale-info = { version = "2", default-features = false }
+gmeta = "1.1.1"
+parity-scale-codec = { version = "3", default-features = false }

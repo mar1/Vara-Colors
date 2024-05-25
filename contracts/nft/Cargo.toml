@@ -1,0 +1,13 @@
+[package]
+name = "nft"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+gstd = "1.1.1"
+nft_io = { path = "io"}
+gmeta = "1.1.1"
+
+[build-dependencies]
+nft_io = { path = "io"}
+gear-wasm-builder = "1.1.1"
