@@ -7,6 +7,7 @@
 
 
 <script>
+//import { GearApi } from '@gear-js/api';
 
 export default {
   data() {
@@ -17,6 +18,48 @@ export default {
   methods: {
     connectWallet() {
       this.isConnected = true
+    },
+    async mintVaraColor() {
+      // this function requires the library @gear-js/api which is not supported on deployment because of a webpack error
+      const programAddress = "0xacf1987d2e17008191fa792e1b695d53170b6072d0418932ec12f090cd34892a"
+
+      const tokenMetadata = {
+        name: "VARA COLOR",
+        description: "VARA Colors is a project made during Polkadot Prodigy hackaton. It's a collection of NFTs living on Vara testnet.",
+        reference: "none",
+        media: "none",
+        word: document.getElementById('textInput').value,
+        saturation: document.getElementById('saturationRange').value,
+        light: document.getElementById('lightRange').value,
+      }
+
+      const payload = {
+        Mint: {
+          to: account?.decodedAddress,
+          tokenMetadata,
+        }
+      };
+
+      let extrinsic
+
+      try {
+        const message = {
+          destination: programAddress,
+          payload: payload,
+          gasLimit: 10000000,
+          value: 1000,
+        };
+        extrinsic = api.message.send(message, meta);
+      } catch (error) {
+        console.error(`${error.name}: ${error.message}`);
+      }
+      try {
+        await extrinsic.signAndSend(keyring, (event) => {
+          console.log(event.toHuman());
+        });
+      } catch (error) {
+        console.error(`${error.name}: ${error.message}`);
+      }
     }
 
   },
