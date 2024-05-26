@@ -35,7 +35,7 @@ The idea behind this project was to experiment with the [VARA blockchain](https:
 - You can access to the front-end [here.](https://vara-colors.vercel.app/)
 - You can access to the program [here.](https://idea.gear-tech.io/programs/0xacf1987d2e17008191fa792e1b695d53170b6072d0418932ec12f090cd34892a?node=wss%3A%2F%2Ftestnet.vara.network)
 - You can access to the smart-contract code [here.](https://github.com/mar1/Vara-Colors/blob/main/contracts/nft/src/lib.rs)
-- You can access to the Taikai project homepage [here.]()
+- You can access to the Taikai project homepage [here.](https://taikai.network/PolkadotProdigy/hackathons/prodigy/projects/clwdh04e00eq0yg01uilisfd0/idea)
 
 ## Tech Stack
 
