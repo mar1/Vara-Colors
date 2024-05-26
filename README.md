@@ -59,7 +59,7 @@ The idea behind this project was to experiment with the [VARA blockchain](https:
 
 ## Optimizations
 
-Unfortunately, there seems to be a problem between Vercel, gear-api, Nuxt and webpack that is hindering deployment. Although the code works locally, the deployed front-end doesn't allow the transaction to be launched. However, the code is available as a comment on github and works locally.
+Unfortunately, there seems to be a problem between Vercel, gear-api, Nuxt and webpack that is hindering deployment. Although the code works locally, the deployed front-end doesn't allow the transaction to be launched. However, [the full code is available as a comment on github](https://github.com/mar1/Vara-Colors/commit/ff72223bb3db32090b7c394196b77f8f502deb53) and works locally.
 
 ## Authors
 
@@ -69,3 +69,7 @@ Unfortunately, there seems to be a problem between Vercel, gear-api, Nuxt and we
 
 - [November Font](https://www.1001fonts.com/november-font.html) by Tepid Monkey Fonts
 - [gNFT Standard](https://wiki.gear-tech.io/docs/examples/Standards/gnft-721)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
