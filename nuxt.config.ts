@@ -17,6 +17,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  target: "static",
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['~/assets/css/main.css'],
@@ -43,20 +44,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: [/node_modules[/\\]@polkadot/],
-    extend(config: Configuration, { isDev, isClient }: { isDev: boolean; isClient: boolean }) {
-      if (config.module) {
-        config.module.rules.push({
-          test: /\.js$/,
-          include: /node_modules[/\\]@polkadot/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env']
-            }
-          }
-        });
-      }
-    }
+
   }
 }
