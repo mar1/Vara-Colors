@@ -1,3 +1,5 @@
+import { Configuration } from 'webpack';
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -23,6 +25,7 @@ export default {
   plugins: [
   ],
 
+
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
@@ -30,6 +33,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxt/typescript-build'
+
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -38,5 +43,20 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: [/node_modules[/\\]@polkadot/],
+    extend(config: Configuration, { isDev, isClient }: { isDev: boolean; isClient: boolean }) {
+      if (config.module) {
+        config.module.rules.push({
+          test: /\.js$/,
+          include: /node_modules[/\\]@polkadot/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env']
+            }
+          }
+        });
+      }
+    }
   }
 }

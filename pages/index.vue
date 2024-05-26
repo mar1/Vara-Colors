@@ -3,10 +3,13 @@
     <Header />
     <Faq />
     <ColorSquare />
+    <MintWrapper />
   </div>
 </template>
 
 <script>
+import MintWrapper from '../components/MintWrapper.vue';
+
 export default {
   name: 'VaraColors'
 }
