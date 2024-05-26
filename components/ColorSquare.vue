@@ -18,8 +18,6 @@
 
       <label for="lightRange">Light:</label>
       <input id="lightRange" type="range" v-model="light" min="0" max="100" />
-
-
     </div>
   </div>
 </template>
@@ -44,7 +42,7 @@ export default {
       else {
         this.textColor = color;
       }
-    },
+    }
   },
 };
 </script>
