@@ -1,69 +1,71 @@
-# varacolor
 
-## Build Setup
+![Logo](https://taikai.azureedge.net/wYRAkDMmVjO-LIHBDG0TTa0v6CcZEYFPXNGxrKF170w/rs:fit:350:0:0/aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3RhaWthaS1zdG9yYWdlL2ltYWdlcy80ZDg5MmI5MC0xYjdhLTExZWYtOGVmMy04NWY0ZTdiZGIxYTdDYXB0dXJlIGTigJllzIFjcmFuIDIwMjQtMDUtMjYgYcyAIDE4LjA5LjAxLnBuZw)
 
-```bash
-# install dependencies
-$ npm install
+# VARA COLORS
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+VARA Colors is a project made during [Polkadot Prodigy Hackaton.](https://www.polkadotprodigy.com/)
+It's a collection of non-fungible tokens living entirely on the VARA blockchain. Contrary to regular NFTs, there is no metadata off-chain as all their attributes are living on the blockchain, in the program's state.
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+NFT from Vara Colors don't need a server to be displayed. They question what an image *is* and what defines the *uniqueness* of a token.
 
-# generate static project
-$ npm run generate
-```
+The idea behind this project was to experiment with the [VARA blockchain](https://vara.network/developers), which enables smart-contracts to be created in Rust. Thanks to its technology, each NFT is unique and permanent.
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+## Features
 
-## Special Directories
+- Choose a text for your NFT
+- Choose a text color mode (black, white, vara)
+- Choose a saturation value (0-100) for the background
+- Choose a light value (0-100) for the background
+- Mint your NFT (free on testnet)
+- Transfer your NFT
+- Burn your NFT
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+## Screenshots
 
-### `assets`
+![App Screenshot](https://storage.googleapis.com/taikai-storage/images/279cb970-1b79-11ef-8ef3-85f4e7bdb1a7varaColors.png)
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+![Demo 1](https://storage.googleapis.com/taikai-storage/images/dbef7810-1b81-11ef-8ef3-85f4e7bdb1a7vr1.png)
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+![Demo 2](https://storage.googleapis.com/taikai-storage/images/e6611d30-1b81-11ef-bba9-4b1cc9a55ddavr2.png)
 
-### `components`
+![Demo 3](https://storage.googleapis.com/taikai-storage/images/ea402c20-1b81-11ef-84ff-45573b110433vr3.png)
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+## Demo
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+- You can access to the front-end [here.](https://vara-colors.vercel.app/)
+- You can access to the program [here.](https://idea.gear-tech.io/programs/0xacf1987d2e17008191fa792e1b695d53170b6072d0418932ec12f090cd34892a?node=wss%3A%2F%2Ftestnet.vara.network)
+- You can access to the smart-contract code [here.](https://github.com/mar1/Vara-Colors/blob/main/contracts/nft/src/lib.rs)
+- You can access to the Taikai project homepage [here.]()
 
-### `layouts`
+## Tech Stack
 
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+**Client:** Vue, Nuxt, TailwindCSS
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+**Server:** Node, Vercel
 
+**Blockchain:** Gear-js, Vara staging network
 
-### `pages`
+## Roadmap
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+- Create the proof-of-concept ✅
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+- Fix the problem with webpack, Nuxt and gear-api on Vercel
 
-### `plugins`
+- Deploy contract on VARA Network (main-net)
 
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
+- Add a gallery of Vara Colors already mined
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
+- Transform the collection into a DAO: the VARA collected will go to secure the chain, and the rewards will be passed on to the NFT holders, in proportion to those they own.
 
-### `static`
+## Optimizations
 
-This directory contains your static files. Each file inside this directory is mapped to `/`.
+Unfortunately, there seems to be a problem between Vercel, gear-api, Nuxt and webpack that is hindering deployment. Although the code works locally, the deployed front-end doesn't allow the transaction to be launched. However, the code is available as a comment on github and works locally.
 
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
+## Authors
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
+- [@mar1dev](https://www.github.com/mar1)
 
-### `store`
+## Acknowledgements
 
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+- [November Font](https://www.1001fonts.com/november-font.html) by Tepid Monkey Fonts
+- [gNFT Standard](https://wiki.gear-tech.io/docs/examples/Standards/gnft-721)
